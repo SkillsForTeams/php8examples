@@ -9,15 +9,34 @@ class BurgerTest extends TestCase
     /**
      * Named Arguments to call the constructor method 
      */
+    public function testWithoutNamedArguments()
+    {
+        $burger = new Burger("Johnys PHP 8 Burger",
+                             "brioche",
+                             "chilli",
+                             "beef",
+                             "iceberg",
+                             ["jalapeno"]);
+         $this->assertInstanceOf(Burger::class, $burger);
+         $this->assertEquals($burger->salad, "iceberg");
+         $this->assertEquals($burger->meatType, "beef");
+    }     
+    
+    /**
+     * Named Arguments to call the constructor method 
+     */
     public function testNamedArguments()
     {
         $burger = new Burger(name: "Johnys PHP 8 Burger",
                              patty: "brioche",
                              sauce: "chilli",
                              meatType: "beef",
-                             salad: "ruccola",
+                             salad: "iceberg",
                              additions: ["jalapeno"]);
-        var_dump($burger);
+         $this->assertInstanceOf(Burger::class, $burger);
+         $this->assertEquals($burger->salad, "iceberg");
+         $this->assertEquals($burger->meatType, "beef");
+         
 
     }
 
@@ -29,11 +48,13 @@ class BurgerTest extends TestCase
         $burger = new Burger(name: "Johnys PHP 8 Burger",                             
                              sauce: "chilli",
                              meatType: "beef",
-                             salad: "ruccola",
+                             salad: "iceberg",
                              patty: "brioche",
                              additions: ["jalapeno"]
                             );
-        var_dump($burger);
+        $this->assertInstanceOf(Burger::class, $burger);
+        $this->assertEquals($burger->meatType, "beef");
+
     }
 
     public function testNamedArgumentsMixedMissing()
@@ -45,7 +66,9 @@ class BurgerTest extends TestCase
                              patty: "brioche",
                              //additions: ["jalapeno"]
                             );
-        var_dump($burger);
+        $this->assertInstanceOf(Burger::class, $burger);
+        $this->assertEquals($burger->sauce, "chilli");
+        $this->assertEquals($burger->meatType, "beef");
     }
 
 

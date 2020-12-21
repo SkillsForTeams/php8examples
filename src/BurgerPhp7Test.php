@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
-use PHP8Burger\Burger;
+use PHP8Burger\BurgerPhp7;
 
 
-class BurgerTest extends TestCase
+class BurgerPhp7Test extends TestCase
 {
 
     /**
@@ -17,7 +17,8 @@ class BurgerTest extends TestCase
                                  "beef",
                                  "ruccola",
                              additions: ["jalapeno"]);
-        var_dump($burger);
+       $this->assertInstanceOf(BurgerPhp7::class, $burger);
+
 
     }
 

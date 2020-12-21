@@ -3,6 +3,7 @@ namespace PHP8Burger;
 use PHPUnit\Framework\TestCase;
 use PHP8Burger\BurgerRepository;
 
+
 class AttributeReader {
     
     private $reflectionClass;
@@ -29,7 +30,7 @@ class AttributeReader {
         foreach($this->reflectionClass->getMethod($methodName)->getAttributes() as $attribute) {
            $attributes[] = [
                 "name" => $attribute->getName(),
-                "arguments" => $attribute->getArguments()
+                "arguments" => $attribute->getArguments()                
             ];
             
         }

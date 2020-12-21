@@ -1,0 +1,19 @@
+{
+    "name": "skillsforteams/PHP8Burger",
+    "description": "PHP 8 Example Code",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHP8Burger\\": "src/"
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "John Behrens",
+            "email": "john.behrens@skills-for-teams.com"
+        }
+    ]
+}

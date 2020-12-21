@@ -8,9 +8,12 @@ class BurgerPhp7 {
     public string $sauce;
     public string $meatType;
     public string $salad;
-    public string $additions; 
+    public array $additions; 
     
-// constructor Property Promotion 
+/** 
+ * PHP 7 Example without constructor Property Promotion
+ * has unnamed Arguments
+ */
 public function __construct(
     string $name,
     string $patty,
@@ -24,7 +27,7 @@ public function __construct(
     $this->sauce = $sauce;
     $this->meatType = $meatType;
     $this->salad = $salad;
-    $this->additions = $additions
+    $this->additions = $additions;
 }
 
 }

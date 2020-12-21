@@ -28,7 +28,7 @@ class FileRepositoryTest extends TestCase
 
     public function testSave()
     {
-        $targetFile = __DIR__."/data/BurgerData.json";
+        $targetFile = __DIR__."/data/BurgerDataStorage.json";
         if(!file_exists($targetFile))  { 
             $startLines = 0; 
         } else {

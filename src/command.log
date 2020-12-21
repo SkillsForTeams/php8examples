@@ -1,23 +1,21 @@
 
 https://www.howtogeek.com/426562/how-to-export-and-import-your-linux-systems-on-windows-10/
 
-Windows PowerShell
-Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+Windows PowerShell - WSL exportieren
 
-Lernen Sie das neue plattformübergreifende PowerShell kennen – https://aka.ms/pscore6
-
-PS C:\Users\JohnBehrens> wsl --list
+# WSL Anzeigen
+PS > wsl --list
 Windows-Subsystem für Linux-Distributionen:
 Ubuntu-20.04 (Standard)
-PS C:\Users\JohnBehrens> wsl --export Ubuntu ubuntu.tar
-Es gibt keine Verteilung mit dem angegebenen Namen.
-PS C:\Users\JohnBehrens> wsl --export Ubuntu-20.04 ubuntu.tar
-PS C:\Users\JohnBehrens> wsl import Ubuntu-php8 c:\Users\JohnBehrens\ubuntu-php8 ubuntu.tar
-/bin/bash: import: command not found
+
+PS > wsl --export Ubuntu ubuntu.tar
+PS > wsl --export Ubuntu-20.04 ubuntu.tar
+PS > wsl import Ubuntu-php8 c:\Users\JohnBehrens\ubuntu-php8 ubuntu.tar
+/bin/bash: import: command not found (Windows Update)
 PS C:\Users\JohnBehrens> wsl --import Ubuntu-php8 c:\Users\JohnBehrens\ubuntu-php8 ubuntu.tar
 
-# execute distribution
-wsl.exe -d Ubuntu-18.04
+# Neue Linux WSL Ausführen
+wsl.exe -d Ubuntu-php8
 
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ondrej/php

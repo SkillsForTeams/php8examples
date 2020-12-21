@@ -4,7 +4,7 @@ use PHP8Burger\Burger;
 use PHP8Burger\FileRepository\DatasetName;
 
 
-#[DatasetName('BurgerData')]
+#[DatasetName('BurgerDataStorage')]
 class BurgerDataSet {
        
     public string $date; 
