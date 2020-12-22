@@ -21,13 +21,13 @@ before_script:
 # Install all project dependencies
 - php composer.phar install
 
-test:phpunit-php8:  
+test:php8-phpunit:  
   image: php:8.0
   script:
   - vendor/bin/phpunit
   allow_failure: true
 
-test:phpunit-php7:  
+test:php7-phpunit:  
   image: php:7.4
   script:
   - vendor/bin/phpunit
