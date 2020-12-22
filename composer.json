@@ -15,5 +15,10 @@
      },
      "require": {
         "phpunit/phpunit": "^9.5"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.3",
+        "phpstan/phpstan": "^0.12.64",
+        "dq5studios/psalm-junit": "^2.0"
     }
 }

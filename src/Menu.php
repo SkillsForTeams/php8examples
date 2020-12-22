@@ -6,7 +6,7 @@ use PHP8Burger\Burger;
 
 class Menu {
      
-    public function __construct(public Burger $burger, public Drink|null|mixed $drink, public SideOrder|Drink|null $sideOrder) {
+    public function __construct(public Burger $burger, public Drink|null $drink, public SideOrder|Drink|null $sideOrder) {
         
     }
 }
