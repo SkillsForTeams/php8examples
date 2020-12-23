@@ -31,7 +31,7 @@ php8-test:phpunit:
 php8-test:phpstan:  
   image: php:8.0
   script:
-  - vendor/bin/phpstan analyse --error-format=gitlab src
+  - - vendor/bin/phpstan analyse --error-format=gitlab -c phpstan.neon
   allow_failure: true
 
 php8-test:psalm:  
@@ -50,5 +50,5 @@ php7-test:phpunit:
 php7-test:phpstan:  
   image: php:7.4
   script:
-  - vendor/bin/phpstan analyse --error-format=gitlab src
+  - vendor/bin/phpstan analyse --error-format=gitlab -c phpstan-php7.neon
   allow_failure: true  

@@ -7,11 +7,12 @@ class FileRepository {
     private string $datasetName;
     
     private string $targetFile;
+    
 
     public function __construct(public object $dataSet, public string|null $dir = null)
     {
-        $this->reflectionClass = new \ReflectionClass($dataSet); 
-        $attributes =  $this->reflectionClass->getAttributes(DatasetName::class);        
+        $reflectionClass = new \ReflectionClass($dataSet); 
+        $attributes =  $reflectionClass->getAttributes(DatasetName::class);        
         $this->datasetName = $attributes[0]->newInstance()->getValue();
         if(!file_exists($dir)) {
             $dir= __DIR__."/data";

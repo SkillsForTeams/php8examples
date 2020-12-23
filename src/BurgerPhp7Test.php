@@ -13,9 +13,9 @@ class BurgerPhp7Test extends TestCase
     {
         $burger = new BurgerPhp7("Johnys PHP 8 Burger",
                                  "brioche",
-                                 "chilli",
-                                 "beef",
+                                 "chilli",                                 
                                  "ruccola",
+                                 "beef",
                                 ["jalapeno"]);
        $this->assertInstanceOf(BurgerPhp7::class, $burger);
 

@@ -1,0 +1,20 @@
+includes:
+  - vendor/phpstan/phpstan-phpunit/extension.neon
+  - vendor/phpstan/phpstan-phpunit/rules.neon
+  
+parameters:
+  level: 3
+  paths:
+    - src/BurgerPhp7.php
+    - src/BurgerPhp7Test.php
+    - src/ComparsionTest.php
+  excludes_analyse:
+    - vendor  
+  ignoreErrors:
+      # should be allowed in php8 as it is language feature 
+      #- '#Missing parameter \$meatType \(string\) in call to PHP8Burger\\Burger constructor\.$#'
+
+     
+  reportUnmatchedIgnoredErrors: true
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false
