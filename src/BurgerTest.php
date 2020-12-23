@@ -2,13 +2,16 @@
 use PHPUnit\Framework\TestCase;
 use PHP8Burger\Burger;
 
-
+/**
+ * @group php8only
+ */
 class BurgerTest extends TestCase
 {
 
     /**
-     * Named Arguments to call the constructor method 
-     */
+     * Named Arguments to call the constructor method  
+     * @group php8only
+     */    
     public function testWithoutNamedArguments()
     {
         $burger = new Burger("Johnys PHP 8 Burger",
@@ -24,6 +27,7 @@ class BurgerTest extends TestCase
     
     /**
      * Named Arguments to call the constructor method 
+     * @group php8only
      */
     public function testNamedArguments()
     {
@@ -41,7 +45,8 @@ class BurgerTest extends TestCase
     }
 
     /**
-     * Named Arguments to call the constructor method 
+     * Named Arguments to call the constructor method
+     * @group php8only 
      */
     public function testNamedArgumentsMixed()
     {
@@ -56,7 +61,10 @@ class BurgerTest extends TestCase
         $this->assertEquals($burger->meatType, "beef");
 
     }
-
+    /**
+     * 
+     * @group php8only 
+     */
     public function testNamedArgumentsMixedMissing()
     {
         $burger = new Burger(name: "Johnys PHP 8 Burger",                             

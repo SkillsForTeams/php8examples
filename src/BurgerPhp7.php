@@ -31,5 +31,3 @@ public function __construct(
 }
 
 }
-
-?> 

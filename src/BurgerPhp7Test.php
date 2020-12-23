@@ -16,7 +16,7 @@ class BurgerPhp7Test extends TestCase
                                  "chilli",
                                  "beef",
                                  "ruccola",
-                             additions: ["jalapeno"]);
+                                ["jalapeno"]);
        $this->assertInstanceOf(BurgerPhp7::class, $burger);
 
 

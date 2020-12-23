@@ -2,7 +2,7 @@
 image: php:8.0
 
 stages:
-  - test
+  - php8-test
   - php7-test
 
 # Select what we should cache
@@ -22,19 +22,19 @@ before_script:
 # Install all project dependencies
 - php composer.phar install
 
-test:phpunit:  
+php8-test:phpunit:  
   image: php:8.0
   script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --exclude-group php7only
   allow_failure: true
 
-test:phpstan:  
+php8-test:phpstan:  
   image: php:8.0
   script:
   - vendor/bin/phpstan analyse --error-format=gitlab src
   allow_failure: true
 
-test:psalm:  
+php8-test:psalm:  
   image: php:8.0
   script:
   - php vendor/bin/psalm 
@@ -44,7 +44,7 @@ test:psalm:
 php7-test:phpunit:  
   image: php:7.4
   script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --exclude-group php8only
   allow_failure: true
 
 php7-test:phpstan:  
