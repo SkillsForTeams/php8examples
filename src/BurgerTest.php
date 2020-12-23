@@ -16,19 +16,16 @@ class BurgerTest extends TestCase
     {
         $burger = new Burger("Johnys PHP 8 Burger",
                              "brioche",
-                             "chilli",
-                             "beef",
+                             "chilli",                             
                              "iceberg",
+                             "beef",
                              ["jalapeno"]);
          $this->assertInstanceOf(Burger::class, $burger);
          $this->assertEquals($burger->salad, "iceberg");
          $this->assertEquals($burger->meatType, "beef");
     }     
     
-    /**
-     * Named Arguments to call the constructor method 
-     * @group php8only
-     */
+
     public function testNamedArguments()
     {
         $burger = new Burger(name: "Johnys PHP 8 Burger",
@@ -44,10 +41,7 @@ class BurgerTest extends TestCase
 
     }
 
-    /**
-     * Named Arguments to call the constructor method
-     * @group php8only 
-     */
+  
     public function testNamedArgumentsMixed()
     {
         $burger = new Burger(name: "Johnys PHP 8 Burger",                             
@@ -61,10 +55,7 @@ class BurgerTest extends TestCase
         $this->assertEquals($burger->meatType, "beef");
 
     }
-    /**
-     * 
-     * @group php8only 
-     */
+    
     public function testNamedArgumentsMixedMissing()
     {
         $burger = new Burger(name: "Johnys PHP 8 Burger",                             
