@@ -18,8 +18,8 @@ public function __construct(
     string $name,
     string $patty,
     string $sauce,
-    string $meatType = "beef", 
     string $salad,
+    string $meatType = "beef", 
     array $additions = []
 ) {
     $this->name = $name;
