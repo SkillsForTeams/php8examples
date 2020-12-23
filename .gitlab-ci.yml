@@ -27,7 +27,7 @@ php8-test:phpunit:
   image: php:8.0
   script:
   - vendor/bin/phpunit --exclude-group php7only
-  allow_failure: true
+  allow_failure: false
 
 php8-test:phpstan:  
   image: php:8.0
@@ -46,7 +46,7 @@ php7-test:phpunit:
   image: php:7.4
   script:
   - vendor/bin/phpunit --exclude-group php8only
-  allow_failure: true
+  allow_failure: false
 
 php7-test:phpstan:  
   image: php:7.4
