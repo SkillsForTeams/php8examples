@@ -2,8 +2,9 @@
 image: php:8.0
 
 stages:
-  - php8-test
-  - php7-test
+ - test
+ - php7-test
+ - php8-test
 
 # Select what we should cache
 cache:
@@ -22,7 +23,7 @@ before_script:
 # Install all project dependencies
 - php composer.phar install
 
-php8-test:phpunit:  
+php8-test:phpunit:
   image: php:8.0
   script:
   - vendor/bin/phpunit --exclude-group php7only
