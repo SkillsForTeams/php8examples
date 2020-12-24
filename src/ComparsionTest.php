@@ -36,7 +36,7 @@ class ComparsionTest extends TestCase {
     }
 
     /**
-     * PHP 8 behavior with combined chars and numbers in string
+     * PHP 7 behavior with combined chars and numbers in string
      * @group php7only
      */
     public function testComparsionPHP7StyleNumberInString () 
