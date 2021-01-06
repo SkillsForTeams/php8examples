@@ -47,16 +47,13 @@ class ComparsionTest extends TestCase {
         $this->assertTrue('42v' == 42);          
         
     }
-
-
-    
+   
 
     public function testComparsionNumberAsString ()
     {
         $this->assertTrue('2' == 2);
         $this->assertTrue('2.2' == 2.2);
-        $this->assertTrue('0.0' == 0);
-        $this->assertTrue('blahblah' == 0);
+        $this->assertTrue('0.0' == 0);        
         $this->assertFalse('blahblah' == "0");
     }
        
