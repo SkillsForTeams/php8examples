@@ -45,6 +45,7 @@ class ComparsionTest extends TestCase {
         $this->assertTrue("42 " == 42);
         $this->assertFalse('v42' == 42);
         $this->assertTrue('42v' == 42);          
+        $this->assertTrue('blahblah' == "0");
     }
 
 
