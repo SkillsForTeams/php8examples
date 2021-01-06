@@ -45,7 +45,7 @@ class ComparsionTest extends TestCase {
         $this->assertTrue("42 " == 42);
         $this->assertFalse('v42' == 42);
         $this->assertTrue('42v' == 42);          
-        $this->assertTrue('blahblah' == "0");
+        
     }
 
 
@@ -56,6 +56,8 @@ class ComparsionTest extends TestCase {
         $this->assertTrue('2' == 2);
         $this->assertTrue('2.2' == 2.2);
         $this->assertTrue('0.0' == 0);
+        $this->assertTrue('blahblah' == 0);
+        $this->assertFalse('blahblah' == "0");
     }
        
     public function testComparsioTypeSafe ()
