@@ -35,12 +35,6 @@ php8-test:phpstan:
   - - vendor/bin/phpstan analyse --error-format=gitlab -c phpstan.neon
   allow_failure: true
 
-php8-test:psalm:  
-  image: php:8.0
-  script:
-  - php vendor/bin/psalm 
-  allow_failure: true  
-
 
 php7-test:phpunit:  
   image: php:7.4
